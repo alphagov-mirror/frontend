@@ -1,6 +1,6 @@
 <% content_for :title do %><%= t('funding_form.contact_information.title') %> - GOV.UK<% end %>
 <% content_for :extra_headers do %>
-  <meta name="description" content="<%= t('funding_form.organisation_type.title') %>" />
+  <meta name="description" content="<%= t('funding_form.contact_information.title') %>" />
 <% end %>
 
 <div class="govuk-width-container">
@@ -17,21 +17,21 @@
             text: t('funding_form.contact_information.full_name.label'),
             bold: true
           },
-          name: t('funding_form.contact_information.full_name.label')
+          name: "full_name"
         } %>
         <%= render "govuk_publishing_components/components/input", {
           label: {
             text:t('funding_form.contact_information.job_title.label'),
             bold: true
           },
-          name: t('funding_form.contact_information.jon_title.label')
+          name: "job_title"
         } %>
         <%= render "govuk_publishing_components/components/input", {
           label: {
             text: t('funding_form.contact_information.email_address.label'),
             bold: true
           },
-          name: t('funding_form.contact_information.email_address.label'),
+          name: "email_address",
           hint: t('funding_form.contact_information.email_address.hint')
         } %>
         <%= render "govuk_publishing_components/components/input", {
@@ -39,7 +39,7 @@
             text: t('funding_form.contact_information.telephone_number.label'),
             bold: true
           },
-          name: t('funding_form.contact_information.telephone_number.label'),
+          name: "telephone_number",
           width: 20
         } %>
 
