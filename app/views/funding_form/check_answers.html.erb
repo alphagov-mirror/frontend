@@ -1,0 +1,6 @@
+<%= session.each do |s| %>
+  <% #{s} %>
+<% end %>
+<%= form_tag do %>
+<%= render "govuk_publishing_components/components/button", text: "Send", margin_bottom: true %>
+<% end %>
