@@ -10,4 +10,10 @@ class LocalTransactionServicesTest < ActiveSupport::TestCase
       assert_not LocalTransactionServices.instance.unavailable?(461, "Northern Ireland")
     end
   end
+
+  context ".content" do
+    should "return a string with the given country and local authority name in" do
+      assert_equal "This service is unavailable in Dundee, Scotland", LocalTransactionServices.instance.content(461, "Scotland", "Dundee")
+    end
+  end
 end
