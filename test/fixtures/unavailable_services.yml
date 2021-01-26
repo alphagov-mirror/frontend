@@ -1,3 +1,6 @@
 services:
   461:
-    - Scotland
+    countries:
+      unavailable_in:
+        - Scotland
+      content: "This service is unavailable in %{local_authority_name}, %{country_name}"
